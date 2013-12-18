@@ -2,10 +2,18 @@
   $scss = new scssc();
   $scss->setFormatter("scss_formatter_compressed");
   foreach ($cssSources as $key => $cssSource) {
-    echo $scss->compile('
+    $pathRaw = explode("/", $cssSource);
+    $path = str_replace(end($pathRaw), "", implode("/", array_slice($pathRaw, 0)));
+    $pathWithoutCSS = str_replace("css/", "", $path);
+
+    $styleContent = $scss->compile('
       .yss-include {
         '.file_get_contents($cssSources[$key]).'
       }
     ');
+
+    $styleContent = str_replace("url('../", "url('".$pathWithoutCSS , $styleContent);
+    echo $styleContent;
+
   }
 ?>

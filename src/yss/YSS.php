@@ -13,7 +13,10 @@ function getBetween($content,$start,$end){
 }
 
 function printStyleguide($src){
-  $cssRaw = file_get_contents($src);
+  $pathRaw = explode("/", $src);
+  $path = str_replace(end($pathRaw), "", implode("/", array_slice($pathRaw, 0)));
+  $pathWithoutCSS = str_replace("css/", "", $path);
+  $cssRaw = str_replace('src="../', 'src="'.$pathWithoutCSS, file_get_contents($src));
   $cssComment = getBetween($cssRaw,'/*','*/');
 
   foreach ($cssComment as $key => $content) {
