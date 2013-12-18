@@ -1,0 +1,113 @@
+/*=============================================================================
+ * SYNTAX HIGHLIGHT THEME
+ *============================================================================*/
+pre {
+  background: #1f1f1f !important;
+  word-wrap: break-word !important;
+  margin: 20px 0px 30px 0px !important;
+  padding: 25px !important;
+  padding-left: 15px !important;
+  color: #f3f3f3 !important;
+  font-size: 14px !important;
+  overflow-x: auto !important;
+  position: relative !important;
+  line-height: 1.4em !important;
+  white-space: pre !important;
+  border: none !important;
+  border-radius: 0 !important; }
+
+pre, code {
+  font-family: Monaco, Courier, monospace !important; }
+
+pre .comment {
+  color: #f3f3f3 !important; }
+
+pre .constant.numeric {
+  color: #fd971f !important; }
+
+pre .constant {
+  color: #66d9ef !important; }
+
+pre .constant.symbol, pre .constant.language {
+  color: #fd971f !important; }
+
+pre .storage {
+  color: #fd971f !important; }
+
+pre .string {
+  color: #a6e22e !important; }
+
+pre .string.regexp {
+  color: #fd971f !important; }
+
+pre .keyword, pre .selector, pre .storage {
+  color: #f92672 !important; }
+
+pre .inherited-class {
+  color: #fd971f !important; }
+
+pre .entity {
+  color: #f92672 !important; }
+
+pre .support {
+  color: #66d9ef !important; }
+
+pre .support.magic {
+  color: #fd971f; }
+
+pre .variable {
+  color: #66d9ef !important; }
+
+pre .function {
+  color: #fd971f !important; }
+
+pre .entity.class {
+  color: #a6e22e !important; }
+
+pre .support.class-name, pre .support.type {
+  color: #66d9ef !important; }
+
+.rainbow-header {
+  display: none !important; }
+
+pre .close {
+  float: none !important;
+  font-size: 14px !important;
+  font-weight: normal !important;
+  color: #66d9ef !important;
+  text-shadow: 0 0 0 #000 !important;
+  opacity: 1 !important;
+  filter: alpha(opacity=100) !important; }
+
+.rainbow-line {
+  display: block !important;
+  width: auto !important; }
+  .rainbow-line span {
+    white-space: pre !important; }
+  .rainbow-line:hover {
+    background-color: #393939 !important; }
+    .rainbow-line:hover .rainbow-line-number {
+      background-color: #393939; }
+  .rainbow-line .rainbow-line-number {
+    text-align: right !important;
+    display: block !important;
+    width: 20px !important;
+    float: left !important;
+    vertical-align: top !important; }
+    .rainbow-line .rainbow-line-number::before {
+      content: attr(data-number);
+      color: #505050 !important; }
+  .rainbow-line .rainbow-line-code {
+    padding-left: 1em !important;
+    display: block !important;
+    width: 100% !important;
+    height: 1.4em !important;
+    margin-left: 25px !important; }
+
+.yss-container {
+  padding: 40px 0;
+  max-width: 1140px;
+  margin: 0 auto; }
+  @media only screen and (max-width: 767px) {
+    .yss-container {
+      padding: 10px; } }

@@ -24,10 +24,10 @@ function printStyleguide($src){
       foreach ($code as $keyCode => $codeContent) {
         if($keyCode&1){
           // snippet preview
-          echo $codeContent;
+          echo '<div class="yss-include">'.$codeContent.'</div>';
 
-          $result = Parsedown::instance()->parse('````'.$codeContent.'````');
-          echo $result;
+          //$result = Parsedown::instance()->parse('````'.$codeContent.'````');
+          echo '<pre><code data-language="html">'.$codeContent.'</code></pre>';
         }else {
           $result = Parsedown::instance()->parse($codeContent);
           if(strlen($result) > 10){

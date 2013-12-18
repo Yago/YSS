@@ -1,6 +1,7 @@
 <?php
   include 'config.php';
   include 'vendor/erusev/parsedown/Parsedown.php';
+  include 'vendor/leafo/scssphp/scss.inc.php';
   include 'src/yss/YSS.php';
 ?>
 
@@ -17,22 +18,25 @@
 
     <link rel="stylesheet" href="css/yss.css">
 
-    <?php foreach ($cssSources as $cssSource): ?>
-      <link rel="stylesheet" href="<?php echo $cssSource; ?>">
-    <?php endforeach; ?>
+    <style>
+      <?php include 'src/yss/style-nester.php'; ?>
+    </style>
 
   </head>
   <body>
 
-    <?php 
-      foreach ($cssSources as $cssSource) {
-        printStyleguide($cssSource);
-      }
-    ?>
+    <div id="yss-container" class="yss-container">
+      <?php 
+        foreach ($cssSources as $cssSource) {
+          printStyleguide($cssSource);
+        }
+      ?>
+    </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="vendor/component/jquery/jquery.min.js"><\/script>')</script>
-
+    
+    <script src="js/vendor/rainbow.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

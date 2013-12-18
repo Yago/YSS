@@ -1,0 +1,92 @@
+/*=============================================================================
+ * SYNTAX HIGHLIGHT THEME
+ *============================================================================*/
+
+$blue:            #66D9EF;
+$green:           #A6E22E;
+$orange:          #FD971F;
+$pink:            #F92672;
+$background:      lighten(#191919, 2.5%);
+$foreground:      lighten(#ededed, 2.5%);
+$selected:        lighten(#4a4a4a, 2.5%);
+
+$lineHeight:       1.4em;
+
+$syntax:          Monaco, Courier, monospace;
+
+pre {
+  background: $background !important;
+  word-wrap: break-word !important;
+  margin: 20px 0px 30px 0px !important;
+  padding: 25px !important;
+  padding-left: 15px !important;
+  color: $foreground !important;
+  font-size: 14px !important;
+  overflow-x: auto !important;
+  position: relative !important;
+  line-height: $lineHeight !important;
+  white-space:pre !important;
+  border: none !important;
+  border-radius: 0!important;
+}
+
+pre, code {font-family: $syntax !important;}
+pre .comment {color: $foreground !important;}
+pre .constant.numeric {color: $orange !important;}
+pre .constant {color: $blue !important;}
+pre .constant.symbol, pre .constant.language {color: $orange !important;}
+pre .storage {color: $orange !important;}
+pre .string {color: $green !important;}
+pre .string.regexp {color: $orange !important;}
+pre .keyword, pre .selector, pre .storage {color: $pink !important;}
+pre .inherited-class {color: $orange !important;}
+pre .entity {color: $pink !important;}
+pre .support {color: $blue !important;}
+pre .support.magic {color: $orange}
+pre .variable {color: $blue !important;}
+pre .function {color: $orange !important;}
+pre .entity.class {color: $green !important;}
+pre .support.class-name, pre .support.type {color: $blue !important;}
+
+.rainbow-header {display: none !important;}
+
+pre .close {
+  float: none !important;
+  font-size: 14px !important;
+  font-weight: normal !important;
+  color: $blue !important;
+  text-shadow: 0 0 0 #000 !important;
+  opacity: 1 !important;
+  filter: alpha(opacity=100) !important;
+}
+
+
+.rainbow-line {
+  display: block !important;
+  width: auto !important;
+  span {white-space:pre !important;}
+  &:hover {
+    background-color: lighten($background, 10%) !important;
+    .rainbow-line-number {
+        background-color: lighten($background, 10%);
+    }
+  }
+  .rainbow-line-number {
+    text-align: right !important;
+    display: block !important;
+    width: 20px !important;
+    float: left !important;
+    vertical-align: top !important;
+    &::before {
+      content: attr(data-number);
+      color: $selected !important;
+    }
+  }
+  .rainbow-line-code {
+    padding-left: 1em !important;
+    display: block !important;
+    width: 100% !important;
+    height: $lineHeight !important;
+    margin-left: 25px !important;
+  }
+}

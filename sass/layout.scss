@@ -1,0 +1,9 @@
+.yss-container {
+  padding: 40px 0;
+  max-width: 1140px;
+  margin: 0 auto;
+  @media only screen and (max-width: 767px) {
+    padding: 10px;
+  }
+}
+
