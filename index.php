@@ -17,10 +17,18 @@
 
     <link rel="stylesheet" href="css/yss.css">
 
+    <?php foreach ($cssSources as $cssSource): ?>
+      <link rel="stylesheet" href="<?php echo $cssSource; ?>">
+    <?php endforeach; ?>
+
   </head>
   <body>
 
-    <?php printStyleguide($cssSource); ?>
+    <?php 
+      foreach ($cssSources as $cssSource) {
+        printStyleguide($cssSource);
+      }
+    ?>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="vendor/component/jquery/jquery.min.js"><\/script>')</script>

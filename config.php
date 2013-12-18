@@ -1,6 +1,8 @@
 <?php
 
-/* Where is the stylesheet that you want to parse */
-$cssSource = 'test/mystyle.css';
+/* Path of your file(s) */
+$cssSources = array(
+  'test/mystyle.css'
+);
 
 ?>
