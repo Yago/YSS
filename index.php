@@ -1,3 +1,9 @@
+<?php
+  include 'config.php';
+  include 'vendor/erusev/parsedown/Parsedown.php';
+  include 'src/yss/YSS.php';
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -13,6 +19,8 @@
 
   </head>
   <body>
+
+    <?php printStyleguide($cssSource); ?>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="vendor/component/jquery/jquery.min.js"><\/script>')</script>
