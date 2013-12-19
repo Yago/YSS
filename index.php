@@ -25,6 +25,14 @@
   </head>
   <body>
 
+    <div id="yss-navigation-container" class="yss-navigation-container">
+      <nav id="yss-navigation" class="yss-navigation">
+        <ul>
+          
+        </ul>
+      </nav>
+    </div>
+
     <div id="yss-container" class="yss-container">
       <?php 
         foreach ($cssSources as $cssSource) {

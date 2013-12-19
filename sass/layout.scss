@@ -7,3 +7,16 @@
   }
 }
 
+
+.yss-navigation-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 350px;
+  background: #d2d2d2;
+  z-index: 99;
+}
+
+.yss-active {
+  color: red;
+}

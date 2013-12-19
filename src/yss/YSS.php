@@ -34,14 +34,14 @@ function printStyleguide($src){
         }else {
           $result = Parsedown::instance()->parse($codeContent);
           if(strlen($result) > 10){
-            echo $result;
+            echo '<div class="yss-content">'.$result.'</div>';
           }
         }
       }
     }else{
       $result = Parsedown::instance()->parse($content);
       if(strlen($result) > 15){
-        echo $result;
+        echo '<div class="yss-content">'.$result.'</div>';
       }
     }
   }
