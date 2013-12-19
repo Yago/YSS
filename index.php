@@ -25,6 +25,10 @@
   </head>
   <body>
 
+    <header id="yss-header" class="yss-header">
+      <button id="yss-show-nav">Show</button>
+    </header>
+
     <div id="yss-navigation-container" class="yss-navigation-container">
       <nav id="yss-navigation" class="yss-navigation">
         <ul>
@@ -45,6 +49,7 @@
     <script>window.jQuery || document.write('<script src="vendor/component/jquery/jquery.min.js"><\/script>')</script>
     
     <script src="js/vendor/rainbow.js"></script>
+    <script src="js/vendor/jquery.scrollTo.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
