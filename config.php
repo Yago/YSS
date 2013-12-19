@@ -2,7 +2,7 @@
 
 /* Path of your file(s) */
 $cssSources = array(
-  'test/mystyle.css'
+  '../../cardis-styleguide/css/cardis.css'
 );
 
 ?>
