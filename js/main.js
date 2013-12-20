@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  $('#yss-navigation').height($(window).height());
   initNavigation();
   $(window).scroll(function(){
     activeNavigation();
@@ -14,7 +15,7 @@ function initNavigation(){
     if($(this).is('h1')){
       index = index + 1;
       $(this).attr('id', 'chapter-'+index);
-      $nav.append('<li><a id="link-chapter-'+index+'" class="link-chapter" href="#chapter-'+index+'"><strong>'+titleContent+'</strong></a></li>');
+      $nav.append('<li><a id="link-chapter-'+index+'" class="link-chapter" href="#chapter-'+index+'">'+titleContent+'</a></li>');
     }else {
       index = index + 1;
       $(this).attr('id', 'sub-chapter-'+index);
@@ -25,7 +26,7 @@ function initNavigation(){
     event.preventDefault();
     $target = $(this).attr('href');
     $('html, body').animate({
-        scrollTop: $($target).offset().top
+        scrollTop: $($target).offset().top - 70
     }, 1000);
   });
 }
@@ -35,7 +36,7 @@ function activeNavigation(){
   $('.yss-content').find('h1, h2').each(function(){
     var titlePos = $(this).offset().top;
     var titleID = $(this).attr('id');
-    if(refPos > titlePos - 40){
+    if(refPos > titlePos - 80){
       $('#yss-navigation').find('a').removeClass('yss-active');
       $("#link-"+titleID).addClass('yss-active');
     }
@@ -48,7 +49,8 @@ function showNavigation(){
   var $body = $("body");
   var $header = $("#yss-header");
 
-  $button.click(function() {
+  $button.click(function(event){
+    event.preventDefault();
     if($navigation.hasClass('yss-pushed')){
       $navigation.animate({left: -250}, "slow" );
       $body.animate({left: 0}, "slow" );

@@ -3,10 +3,12 @@
 //=============================================================================
 
 $black:                   #000000;
-$mine:                    #191b23;
+$mine:                    #1d1d23;
 $silver:                  #b3b3b3;
-$dust:                    #f3f3f3;
+$dust:                    #ebebeb;
 $white:                   #ffffff;
+
+$fire:                    #e67e22;
 
 
 
@@ -14,9 +16,8 @@ $white:                   #ffffff;
 // FONTS
 //=============================================================================
 
-@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Open+Sans:700,800);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic);
 
-$tite:                    'Open Sans', sans-serif;
-$text:                    'Droid Serif', serif;
+$text:                   'Open Sans', sans-serif;
 
 

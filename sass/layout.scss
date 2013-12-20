@@ -7,20 +7,37 @@ body {
 
 .yss-header {
   width: 100%;
-  background: gray;
-  padding: 20px;
+  background: $white;
+  padding: 10px;
   position: fixed;
   left: 0;
   top: 0;
   z-index: 99;
+  border-bottom: 1px solid $dust;
+}
+
+.yss-show-nav {
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin-top: 5px;
+  span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin-bottom: 4px;
+    background: $mine;
+    @include transition(background);
+  }
+  &:hover span {background: $black;}
 }
 
 .yss-container {
-  padding: 40px 0;
-  max-width: 1140px;
+  padding: 90px 0 40px 0;
+  max-width: 800px;
   margin: 0 auto;
   @media only screen and (max-width: 767px) {
-    padding: 10px;
+    padding: 50px 10px 40px 10px;
   }
 }
 
@@ -30,10 +47,43 @@ body {
   left: -250px;
   top: 0;
   width: 250px;
-  background: #d2d2d2;
+  background: $mine;
   z-index: 99;
+  font-family: $text;
+  overflow-x: scroll;
+  ul {
+    padding: 0;
+  }
+  li {list-style-type: none;}
+  a {
+    color: darken($dust, 10%);
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    width: 80%;
+    padding: 5px 10%;
+    @include transition(all);
+    &:hover {
+      background: lighten($mine, 10%);
+      color: $dust;
+    }
+    &.yss-active {color: $fire;}
+  }
 }
 
-.yss-active {
-  color: red;
+a.link-chapter {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background: $dust;
+}
+
+.yss-include {
+  padding: 50px;
+  background: lighten($dust, 5%) !important;
 }

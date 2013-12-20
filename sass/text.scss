@@ -1,13 +1,40 @@
 .yss-content{
 
+  font-family: $text;
+  font-size: 18px;
+  line-height: 1.6em;
+  @media only screen and (max-width: 767px) {font-size: 16px;}
+  @media only screen and (max-width: 480px) {font-size: 14px;}
+
   h1, h2, h3, h4, h5, h6 {
-    font-family: $title;
-    font-weight: 800;
+    font-family: $text;
+    font-weight: 700;
+    margin: 0.4em 0;
+    line-height: 1.3em;
   }
 
+  h1 {
+    margin-top: 1.3em;
+    font-size: 45px;
+    @media only screen and (max-width: 767px) {font-size: 38px;}
+    @media only screen and (max-width: 480px) {font-size: 30px;}
+  }
 
+  h2 {
+    margin-top: 1.3em;
+    font-size: 30px;
+    @media only screen and (max-width: 767px) {font-size: 27px;}
+    @media only screen and (max-width: 480px) {font-size: 24px;}
+  }
 
+  strong {font-weight: 700;}
 
-
+  a {
+    color: $black;
+    font-weight: 400;
+    @include transition(color);
+    &:hover {color: $fire;}
+    &:active {color: lighten($fire, 10%);}
+  }
 
 }

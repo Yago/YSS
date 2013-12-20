@@ -26,16 +26,12 @@
   <body>
 
     <header id="yss-header" class="yss-header">
-      <button id="yss-show-nav">Show</button>
+      <a href="#" id="yss-show-nav" class="yss-show-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
     </header>
-
-    <div id="yss-navigation-container" class="yss-navigation-container">
-      <nav id="yss-navigation" class="yss-navigation">
-        <ul>
-          
-        </ul>
-      </nav>
-    </div>
 
     <div id="yss-container" class="yss-container">
       <?php 
@@ -43,6 +39,16 @@
           printStyleguide($cssSource);
         }
       ?>
+    </div>
+
+    <div id="yss-navigation-container" class="yss-navigation-container">
+      <div class="yss-navigation-wrapper">
+        <nav id="yss-navigation" class="yss-navigation">
+          <ul>
+            
+          </ul>
+        </nav>
+      </div>
     </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
