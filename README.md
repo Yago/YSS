@@ -22,7 +22,7 @@ $ composer install
 4. Just open the url to the directory in your favorite browser/device. Ex: http://myapp.dev/styleguide/ 
 
 ##Usage
-YSS can read the full Markdown syntax, but to create a understandable styleguide, **check the example below** :
+YSS can read the full Markdown syntax, but to create a understandable styleguide, **check the example below** (be careful to use the right `) :
 
 ````
 /*
