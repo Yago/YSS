@@ -1,4 +1,9 @@
 <?php
+
+  #
+  # Nest base style into the include class to target the styles.
+  #
+
   $scss = new scssc();
   $scss->setFormatter("scss_formatter_compressed");
   foreach ($cssSources as $key => $cssSource) {

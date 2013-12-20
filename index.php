@@ -13,7 +13,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
+    <title>YSS : Yago Style Sheet</title>
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 
     <link rel="stylesheet" href="css/yss.css">
@@ -31,6 +31,7 @@
         <span></span>
         <span></span>
       </a>
+      <img src="img/yss.svg" onerror="this.onerror=null; this.src='img/yss.png'" alt="YSS" />
     </header>
 
     <div id="yss-container" class="yss-container">

@@ -7,6 +7,9 @@ $(document).ready(function(){
   showNavigation();
 });
 
+/*
+* Create navigation items
+*/
 function initNavigation(){
   var $nav = $('#yss-navigation').find('ul');
   var index = 0;
@@ -31,6 +34,9 @@ function initNavigation(){
   });
 }
 
+/*
+* Set active class in navigation
+*/
 function activeNavigation(){
   var refPos = $(document).scrollTop();
   $('.yss-content').find('h1, h2').each(function(){
@@ -43,6 +49,10 @@ function activeNavigation(){
   });
 }
 
+
+/*
+* Set navigation toggle slide
+*/
 function showNavigation(){
   var $button = $("#yss-show-nav");
   var $navigation = $("#yss-navigation-container");

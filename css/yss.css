@@ -115,18 +115,23 @@ body {
 .yss-header {
   width: 100%;
   background: white;
-  padding: 10px;
+  padding: 15px 0;
   position: fixed;
   left: 0;
   top: 0;
   z-index: 99;
   border-bottom: 1px solid #ebebeb; }
+  .yss-header img {
+    display: block;
+    margin: 0 auto; }
 
 .yss-show-nav {
   display: block;
   width: 25px;
   height: 25px;
-  margin-top: 5px; }
+  position: absolute;
+  top: 23px;
+  left: 15px; }
   .yss-show-nav span {
     display: block;
     width: 100%;
@@ -137,7 +142,7 @@ body {
     -webkit-transition: background 0.4s;
     -moz-transition: background 0.4s; }
   .yss-show-nav:hover span {
-    background: black; }
+    background: #40404d; }
 
 .yss-container {
   padding: 90px 0 40px 0;

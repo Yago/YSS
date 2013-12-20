@@ -1,5 +1,8 @@
 <?php
 
+#
+# Return string between 2 flag
+#
 function getBetween($content,$start,$end){
   $into = array();
   $startingArray = explode($start, $content);
@@ -12,6 +15,9 @@ function getBetween($content,$start,$end){
   return $into;
 }
 
+#
+# Cut and parse CSS comments to create the styleguide
+#
 function printStyleguide($src){
   $pathRaw = explode("/", $src);
   $path = str_replace(end($pathRaw), "", implode("/", array_slice($pathRaw, 0)));
