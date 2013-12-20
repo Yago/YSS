@@ -25,33 +25,33 @@ $ composer install
 YSS can read the full Markdown syntax, but to create a understandable styleguide, **check the example below** :
 
 ````
-  /*
-  #Font styles
-  ## Titles
-  ````
-  <h1>My title number 1</h1>
-  <h2>My title number 2</h2>
-  <h3>My title number 3</h3>
-  <h4>My title number 4</h4>
-  <h5>My title number 5</h5>
-  <h6>My title number 6</h6>
-  ````
-  ##Paragraphs
-  ````
-  <p>
-  	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ego vero volo in virtute vim esse quam maximam; Sed quid attinet de rebus tam apertis plura requirere?
-  </p>
-  ````
-  */
-  
-  h1, h2, h3, h4, h5, h6 {
-  	font-weight: 900;
-  	color: red;
-  }
-  
-  p {
-  	font-size: 14px;
-  }
+/*
+#Font styles
+## Titles
+''''
+<h1>My title number 1</h1>
+<h2>My title number 2</h2>
+<h3>My title number 3</h3>
+<h4>My title number 4</h4>
+<h5>My title number 5</h5>
+<h6>My title number 6</h6>
+''''
+##Paragraphs
+''''
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ego vero volo in virtute vim esse quam maximam; Sed quid attinet de rebus tam apertis plura requirere?
+</p>
+''''
+*/
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+  color: red;
+}
+
+p {
+  font-size: 14px;
+}
 ````
 
 ##Dependencies
