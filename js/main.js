@@ -21,7 +21,8 @@ function initNavigation(){
       $nav.append('<li><a id="link-sub-chapter-'+index+'" class="link-sub-chapter" href="#sub-chapter-'+index+'">'+titleContent+'</a></li>');
     }
   });
-  $nav.find('a').click(function(){
+  $nav.find('a').click(function(event){
+    event.preventDefault();
     $target = $(this).attr('href');
     $('html, body').animate({
         scrollTop: $($target).offset().top
