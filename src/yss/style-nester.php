@@ -18,7 +18,7 @@
     ');
 
     $styleContent = str_replace("url('../", "url('".$pathWithoutCSS , $styleContent);
-      $styleContent = str_replace("body", "", $styleContent);
+    $styleContent = str_replace("body", "", $styleContent);
     echo $styleContent;
 
   }
