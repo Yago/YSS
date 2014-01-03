@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('#yss-navigation').height($(window).height());
+  $('#yss-navigation-container').height($(window).height());
   initNavigation();
   $(window).scroll(function(){
     activeNavigation();

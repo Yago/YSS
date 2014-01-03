@@ -160,7 +160,8 @@ body {
   background: #1d1d23;
   z-index: 99;
   font-family: "Open Sans", sans-serif;
-  overflow-x: scroll; }
+  overflow-x: scroll;
+  padding-bottom: 15px; }
   .yss-navigation-container ul {
     padding: 0; }
   .yss-navigation-container li {
