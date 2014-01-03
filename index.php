@@ -31,7 +31,7 @@
         <span></span>
         <span></span>
       </a>
-      <img src="img/yss.svg" onerror="this.onerror=null; this.src='img/yss.png'" alt="YSS" />
+      <img id="yss-logo" src="img/yss.svg" onerror="this.onerror=null; this.src='img/yss.png'" alt="YSS" />
     </header>
 
     <div id="yss-container" class="yss-container">

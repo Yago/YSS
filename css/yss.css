@@ -124,6 +124,8 @@ body {
   .yss-header img {
     display: block;
     margin: 0 auto; }
+    .yss-header img:hover {
+      cursor: pointer; }
 
 .yss-show-nav {
   display: block;

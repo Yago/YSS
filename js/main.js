@@ -32,6 +32,11 @@ function initNavigation(){
         scrollTop: $($target).offset().top - 70
     }, 1000);
   });
+  $('#yss-logo').click(function(){
+    $('html, body').animate({
+        scrollTop: 0
+    }, 1000);
+  });
 }
 
 /*
