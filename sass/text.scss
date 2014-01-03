@@ -37,4 +37,10 @@
     &:active {color: lighten($fire, 10%);}
   }
 
+  blockquote, q {
+    border-left: 5px solid $fire;
+    margin-left: 0px;
+    padding-left: 15px;
+  }
+
 }

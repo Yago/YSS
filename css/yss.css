@@ -245,3 +245,7 @@ hr {
       color: #e67e22; }
     .yss-content a:active {
       color: #eb9950; }
+  .yss-content blockquote, .yss-content q {
+    border-left: 5px solid #e67e22;
+    margin-left: 0px;
+    padding-left: 15px; }
