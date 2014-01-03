@@ -79,8 +79,10 @@ body {
 
 a.link-chapter {
   font-size: 16px;
+  text-transform: uppercase;
   font-weight: 700;
-  margin-top: 10px;
+  margin-top: 15px;
+  color: darken($dust, 5%);
 }
 
 hr {
