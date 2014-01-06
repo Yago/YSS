@@ -1,7 +1,22 @@
 {
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "ccampbell/rainbow",
+                "version": "1.1.9",
+                "source": {
+                    "url": "git://github.com/ccampbell/rainbow.git",
+                    "type": "git",
+                    "reference": "1.1.9"
+                }
+            }
+        }
+    ],
     "require": {
         "erusev/parsedown": "dev-master",
         "leafo/scssphp": "dev-master",
-        "components/jquery": "1.9.*@dev"
+        "components/jquery": "1.9.*@dev",
+        "ccampbell/rainbow": "1.1.9"
     }
 }

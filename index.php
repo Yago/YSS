@@ -53,10 +53,9 @@
     </div>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="vendor/component/jquery/jquery.min.js"><\/script>')</script>
-    
-    <script src="js/vendor/rainbow.js"></script>
-    <script src="js/vendor/jquery.scrollTo.min.js"></script>
+    <script>window.jQuery || document.write('<script src="vendor/component/jquery/jquery.min.js"><\/script>')</script>    
+    <script src="vendor/ccampbell/rainbow/js/rainbow.min.js"></script>
+    <script src="vendor/ccampbell/rainbow/js/language/html.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
