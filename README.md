@@ -1,6 +1,7 @@
 #YSS : Yago Style Sheet
 
 >YSS is styleguide framework written in **PHP and jQuery**. It display nicely all your commented CSS to create a very usefull tool.
+Check the [demo](http://yago.io/project/yss/)
 
 ##Features
 * YSS can read Markdown comments in multiple CSS files.
