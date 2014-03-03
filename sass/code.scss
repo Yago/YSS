@@ -27,6 +27,7 @@ pre {
   position: relative;
   line-height: $lineHeight;
   white-space:pre;
+  clear: both;
 }
 
 pre, code {font-family: $syntax}

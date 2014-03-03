@@ -13,7 +13,8 @@ pre {
   overflow-x: auto;
   position: relative;
   line-height: 1.4em;
-  white-space: pre; }
+  white-space: pre;
+  clear: both; }
 
 pre, code {
   font-family: Monaco, monospace; }
@@ -197,8 +198,9 @@ hr {
   background: #ebebeb; }
 
 .yss-include {
-  padding: 50px;
-  background: #f8f8f8; }
+  padding: 5% !important;
+  background: #f8f8f8;
+  width: 90% !important; }
 
 .yss-content {
   font-family: "Open Sans", sans-serif;

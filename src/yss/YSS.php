@@ -25,7 +25,7 @@ function printStyleguide($src){
   $cssRaw = str_replace('src="../', 'src="'.$pathWithoutCSS, file_get_contents($src));
   $cssComment = getBetween($cssRaw,'/*','*/');
 
-  $yssContent;
+  $yssContent = '';
 
   foreach ($cssComment as $key => $content) {
     $codes = explode('````', $content);
