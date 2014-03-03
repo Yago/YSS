@@ -19,27 +19,29 @@
     <link rel="stylesheet" href="css/yss.css">
 
     <style>
-      <?php include 'src/yss/style-nester.php'; ?>
+      
     </style>
 
   </head>
   <body>
 
-    <header id="yss-header" class="yss-header">
-      <a href="#" id="yss-show-nav" class="yss-show-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </a>
-      <img id="yss-logo" src="img/yss.svg" onerror="this.onerror=null; this.src='img/yss.png'" alt="YSS" />
-    </header>
+    <?php if (!$multiPages): ?>
+      <header id="yss-header" class="yss-header">
+        <a href="#" id="yss-show-nav" class="yss-show-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        <img id="yss-logo" src="img/yss.svg" onerror="this.onerror=null; this.src='img/yss.png'" alt="YSS" />
+      </header>
+    <?php endif ?>
 
     <div id="yss-container" class="yss-container">
-      <?php 
-        foreach ($cssSources as $cssSource) {
-          printStyleguide($cssSource);
-        }
-      ?>
+      <?php if ($multiPages): ?>
+        <?php foreach ($cssSources as $cssSource): ?>
+          <?php yssMultiPage($cssSource, $pagesDepth); ?>
+        <?php endforeach ?>
+      <?php endif ?>
     </div>
 
     <div id="yss-navigation-container" class="yss-navigation-container">

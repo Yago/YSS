@@ -16,9 +16,9 @@ function getBetween($content,$start,$end){
 }
 
 #
-# Cut and parse CSS comments to create the styleguide
+# Cut and parse CSS comments to create the one page styleguide
 #
-function printStyleguide($src){
+function yssOnePage($src){
   $pathRaw = explode("/", $src);
   $path = str_replace(end($pathRaw), "", implode("/", array_slice($pathRaw, 0)));
   $pathWithoutCSS = str_replace("css/", "", $path);
@@ -54,6 +54,57 @@ function printStyleguide($src){
   }
 
   echo $yssContent;
+}
+
+#
+# Cut and parse CSS comments to create the multi-pages styleguide
+#
+
+function yssMultiPage($src, $depth){
+
+  // Revert depth order
+  $depthArr = array();
+  for ($i=1; $i <= $depth; $i++) { array_push($depthArr, $i); }
+
+  $pathRaw = explode("/", $src);
+  $path = str_replace(end($pathRaw), "", implode("/", array_slice($pathRaw, 0)));
+  $pathWithoutCSS = str_replace("css/", "", $path);
+  $cssRaw = str_replace('src="../', 'src="'.$pathWithoutCSS, file_get_contents($src));
+  $cssComment = getBetween($cssRaw,'/*','*/');
+
+  $yssContent = '';
+  $markdownContent = '';
+
+  foreach ($cssComment as $key => $content) {
+    $markdownContent .= $content;
+  }
+
+  foreach ($depthArr as $key => $value) {
+    $hashtag = str_repeat('#', $value);
+    $markdownCut = preg_split('/^#[^#].*/m', $markdownContent);
+    $match = array();
+    $markdownUnCut = preg_match_all('/^#[^#].*/m', $markdownContent, $match);
+    foreach ($markdownCut as $key => $value) {
+      $index = $key - 1;
+      if ($index >= 0) {
+        echo '<h1>'.$match[0][$index].'</h1>';
+        echo '<div style="border:1px solid red;margin: 30px 0;">'.$value.'</div>';
+      }else {
+        echo '<div style="border:1px solid red;margin: 30px 0;">'.$value.'</div>';
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
 }
 
 ?>
