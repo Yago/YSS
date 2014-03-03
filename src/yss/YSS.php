@@ -25,6 +25,8 @@ function printStyleguide($src){
   $cssRaw = str_replace('src="../', 'src="'.$pathWithoutCSS, file_get_contents($src));
   $cssComment = getBetween($cssRaw,'/*','*/');
 
+  $yssContent;
+
   foreach ($cssComment as $key => $content) {
     $codes = explode('````', $content);
 
@@ -32,24 +34,26 @@ function printStyleguide($src){
       foreach ($codes as $keyCode => $codeContent) {
         if(($keyCode%2) != 0){
           // snippet preview
-          echo '<div class="yss-include">'.$codeContent.'</div>';
+          $yssContent .= '<div class="yss-include">'.$codeContent.'</div>';
 
           //$result = Parsedown::instance()->parse('````'.$codeContent.'````');
-          echo '<pre><code data-language="html">'.$codeContent.'</code></pre>';
+          $yssContent .= '<pre><code data-language="html">'.$codeContent.'</code></pre>';
         }else {
           $result = Parsedown::instance()->parse($codeContent);
           if(strlen($result) > 10){
-            echo '<div class="yss-content">'.$result.'</div>';
+            $yssContent .= '<div class="yss-content">'.$result.'</div>';
           }
         }
       }
     }else{
       $result = Parsedown::instance()->parse($content);
       if(strlen($result) > 15){
-        echo '<div class="yss-content">'.$result.'</div>';
+        $yssContent .= '<div class="yss-content">'.$result.'</div>';
       }
     }
   }
+
+  echo $yssContent;
 }
 
 ?>
