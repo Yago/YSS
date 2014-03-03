@@ -26,12 +26,11 @@ function printStyleguide($src){
   $cssComment = getBetween($cssRaw,'/*','*/');
 
   foreach ($cssComment as $key => $content) {
-    $content = str_replace("\n  #", "\n#", $content);
-    $code = explode('````', $content);
+    $codes = explode('````', $content);
 
-    if(isset($code[1])){
-      foreach ($code as $keyCode => $codeContent) {
-        if($keyCode&1){
+    if(isset($codes[1])){
+      foreach ($codes as $keyCode => $codeContent) {
+        if(($keyCode%2) != 0){
           // snippet preview
           echo '<div class="yss-include">'.$codeContent.'</div>';
 

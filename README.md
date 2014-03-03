@@ -19,6 +19,7 @@ Check the [demo](http://yago.io/project/yss/)
 ````
 $ cd path/to/your/styleguide/dir/
 $ composer install
+$ sass --watch sass/yss.scss:css/yss.css
 ````
 
 4. Just open the url to the directory in your favorite browser/device. Ex: http://myapp.dev/styleguide/ 

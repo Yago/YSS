@@ -2,7 +2,7 @@
 
 /* Path of your file(s) */
 $cssSources = array(
-  'test/demo.css'
+  '../../antistatique/cardis/web/css/3abe89f_cardis_2.css'
 );
 
 ?>
