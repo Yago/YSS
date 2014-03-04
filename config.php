@@ -7,6 +7,6 @@ $cssSources = array(
 
 $multiPages = true;
 
-$pagesDepth = 3;
+$pagesDepth = 2;
 
 ?>
